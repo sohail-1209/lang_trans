@@ -1,0 +1,169 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+    background-color: #f5f0d4;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container styling */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #5dc8cf;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #015551;
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    display: block;
+    color: #015551;
+}
+
+/* Select and Textarea Styling */
+select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #015551;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+select:focus, textarea:focus {
+    border-color: #FE4F2D;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    background-color: #FE4F2D;
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #015551;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Translated text box */
+#translatedBox {
+    background-color: #FDFBEE;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #015551;
+    margin-top: 20px;
+}
+
+#translatedText {
+    color: #333;
+}
+
+/* History section */
+h2 {
+    color: #015551;
+    margin-top: 30px;
+}
+
+#historyList {
+    list-style-type: none;
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+#historyList li {
+    background-color: #57B4BA;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#historyList li:hover {
+    background-color: #FE4F2D;
+}
+
+/* Toggle history button */
+#toggleHistory {
+    background-color: #FE4F2D;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#toggleHistory:hover {
+    background-color: #015551;
+}
+
+/* Export history button */
+button#exportHistory {
+    background-color: #FE4F2D;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button#exportHistory:hover {
+    background-color: #015551;
+}
+
+/* Speech-to-text buttons */
+button[onclick="startSpeechToText()"], button[onclick="stopSpeechToText()"] {
+    background-color: #FE4F2D;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button[onclick="startSpeechToText()"]:hover, button[onclick="stopSpeechToText()"]:hover {
+    background-color: #015551;
+}
