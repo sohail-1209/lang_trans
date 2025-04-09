@@ -8,9 +8,17 @@ const { Translate } = require('@google-cloud/translate').v2;
 const app = express();
 const db = new sqlite3.Database('./translations.db');
 
-app.use(cors());
+// CORS configuration
+const corsOptions = {
+  origin: "*",  // You can replace "*" with specific domains in production
+  methods: ["GET", "POST", "DELETE"],
+  allowedHeaders: ["Content-Type"]
+};
+
+app.use(cors(corsOptions)); // Apply CORS configuration globally
+
 app.use(bodyParser.json());
-app.use(express.static("./public"))
+app.use(express.static("./public"));
 
 // Google Translate client setup
 const translate = new Translate({ key: process.env.GOOGLE_API_KEY });
@@ -80,7 +88,7 @@ app.delete('/api/history/:id', (req, res) => {
             return res.status(404).json({ deleted: false, message: 'Entry not found' });
         }
 
-        console.log("🗑 Deleted history entry with ID: ${id}");
+        console.log("🗑 Deleted history entry with ID:", id);
         res.json({ deleted: true });
     });
 });
